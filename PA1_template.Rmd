@@ -9,7 +9,7 @@ echo = TRUE  # Always make code visible
 options(scipen = 1)  # Turn off scientific notations for numbers
 ```
 
-### Loading and processing the data (Includes Loading necessary libraries)
+### Loading and pre-processing the data (Includes Loading necessary libraries)
 ```{r}
 unzip("activity.zip")
 data <- read.csv("activity.csv", colClasses = c("integer", "Date", "factor"))
