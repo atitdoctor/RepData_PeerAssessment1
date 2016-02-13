@@ -134,5 +134,9 @@ table(newData$weekdays)
 avgSteps <- aggregate(newData$steps, list(interval = as.numeric(as.character(newData$interval)), weekdays = newData$weekdays), FUN = "mean")
 names(avgSteps)[3] <- "meanOfSteps"
 library(lattice)
+```
+
+Showing the difference between weekday and weekend activity through the histogram
+```{r}
 xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays, layout = c(1, 2), type = "l", xlab = "Interval", ylab = "Number of steps")
 ```
