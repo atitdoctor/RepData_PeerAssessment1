@@ -93,9 +93,7 @@ ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",colour = "darkgre
 
 Mean total number of steps taken per day:
 ```{r}
-newTotalSteps <- aggregate(newData$steps, 
-                           list(Date = newData$date), 
-                           FUN = "sum")$x
+newTotalSteps <- aggregate(newData$steps, list(Date = newData$date), FUN = "sum")$x
 newMean <- mean(newTotalSteps)
 newMean
 ```
