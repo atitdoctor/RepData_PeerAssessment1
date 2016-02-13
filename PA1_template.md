@@ -149,7 +149,6 @@ sum(is.na(newData))
 ```{r}
 ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",colour = "darkgreen",fill = "darkgreen",width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Steps Taken Each Day (w/o missing data)", x = "Date", y = "Total Steps")
 ```
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
 
 * Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
@@ -261,4 +260,3 @@ xyplot(avgSteps$meanOfSteps ~ avgSteps$interval | avgSteps$weekdays,
        xlab = "Interval", ylab = "Number of steps")
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
