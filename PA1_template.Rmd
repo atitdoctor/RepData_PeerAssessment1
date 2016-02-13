@@ -34,9 +34,11 @@ ggplot(noNA, aes(date, steps))
 ```
 
 * Calculate and report the mean and median total number of steps taken per day
-Mean total number of steps taken per day:
 ```{r}
 totalSteps <- aggregate(noNA$steps, list(Date = noNA$date), FUN = "sum")$x
+```
+Mean total number of steps taken per day:
+```{r}
 mean(totalSteps)
 ```
 Median total number of steps taken per day:
