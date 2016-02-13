@@ -3,7 +3,6 @@ Reproducible Research: Peer Assessment 1
 Atit Doctor 
 February 12, 2016
 
-
 ### Basic settings
 ```{r}
 echo = TRUE  # Always make code visible
