@@ -88,9 +88,9 @@ sum(is.na(newData))
 * Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
 ```{r}
 ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",
-                                            colour = "steelblue",
-                                             fill = "steelblue",
-                                             width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Number of Steps Taken Each Day (no missing data)", x = "Date", y = "Total number of steps")
+                                            colour = "darkgreen",
+                                             fill = "darkgreen",
+                                             width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Steps Taken Each Day (w/o missing data)", x = "Date", y = "Total Steps")
 ```
 
 * Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
