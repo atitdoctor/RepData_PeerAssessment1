@@ -85,7 +85,7 @@ median(totalSteps)
 avgSteps <- aggregate(noNA$steps, list(interval = as.numeric(as.character(noNA$interval))), FUN = "mean")
 names(avgSteps)[2] <- "meanOfSteps"
 
-ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "blue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute intervals", y = "Average Number of Steps Taken")
+ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "steelblue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute intervals", y = "Average Number of Steps Taken")
 ```
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
 
@@ -149,7 +149,7 @@ sum(is.na(newData))
 * Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. 
 
 ```{r}
-ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",colour = "darkgreen",fill = "darkgreen",width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Steps Taken Each Day (w/o missing data)", x = "Date", y = "Total Steps")
+ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",colour = "steelblue",fill = "darkgreen",width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Steps Taken Each Day (w/o missing data)", x = "Date", y = "Total Steps")
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
