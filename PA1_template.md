@@ -87,6 +87,8 @@ names(avgSteps)[2] <- "meanOfSteps"
 
 ggplot(avgSteps, aes(interval, meanOfSteps)) + geom_line(color = "blue", size = 0.8) + labs(title = "Time Series Plot of the 5-minute Interval", x = "5-minute intervals", y = "Average Number of Steps Taken")
 ```
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+
 
 * Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 ```{r}
@@ -149,6 +151,9 @@ sum(is.na(newData))
 ```{r}
 ggplot(newData, aes(date, steps)) + geom_bar(stat = "identity",colour = "darkgreen",fill = "darkgreen",width = 0.7) + facet_grid(. ~ month, scales = "free") + labs(title = "Histogram of Total Steps Taken Each Day (w/o missing data)", x = "Date", y = "Total Steps")
 ```
+
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+
 
 * Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
